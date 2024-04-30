@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C62AC4742BE181F0008EC89D /* ios_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C62AC4722BE181F0008EC89D /* ios_file.cpp */; };
 		C6709F872BE15A6A00C63C2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6709F862BE15A6A00C63C2F /* AppDelegate.m */; };
 		C6709F8A2BE15A6A00C63C2F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6709F892BE15A6A00C63C2F /* SceneDelegate.m */; };
 		C6709F8D2BE15A6A00C63C2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6709F8C2BE15A6A00C63C2F /* ViewController.m */; };
@@ -17,6 +18,7 @@
 		C6709FA22BE15A6D00C63C2F /* Test_FileSystemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6709FA12BE15A6D00C63C2F /* Test_FileSystemTests.m */; };
 		C6709FAC2BE15A6D00C63C2F /* Test_FileSystemUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6709FAB2BE15A6D00C63C2F /* Test_FileSystemUITests.m */; };
 		C6709FAE2BE15A6D00C63C2F /* Test_FileSystemUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6709FAD2BE15A6D00C63C2F /* Test_FileSystemUITestsLaunchTests.m */; };
+		C6709FBB2BE15AE700C63C2F /* ios_file_system.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6709FBA2BE15AE700C63C2F /* ios_file_system.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C62AC4722BE181F0008EC89D /* ios_file.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ios_file.cpp; sourceTree = "<group>"; };
+		C62AC4732BE181F0008EC89D /* ios_file.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ios_file.hpp; sourceTree = "<group>"; };
 		C6709F822BE15A6A00C63C2F /* Test-FileSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-FileSystem.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6709F852BE15A6A00C63C2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6709F862BE15A6A00C63C2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		C6709FA72BE15A6D00C63C2F /* Test-FileSystemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test-FileSystemUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6709FAB2BE15A6D00C63C2F /* Test_FileSystemUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test_FileSystemUITests.m; sourceTree = "<group>"; };
 		C6709FAD2BE15A6D00C63C2F /* Test_FileSystemUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test_FileSystemUITestsLaunchTests.m; sourceTree = "<group>"; };
+		C6709FBA2BE15AE700C63C2F /* ios_file_system.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ios_file_system.mm; sourceTree = "<group>"; };
+		C6709FBC2BE15B6300C63C2F /* ios_file_system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ios_file_system.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,8 @@
 		C6709F842BE15A6A00C63C2F /* Test-FileSystem */ = {
 			isa = PBXGroup;
 			children = (
+				C62AC4722BE181F0008EC89D /* ios_file.cpp */,
+				C62AC4732BE181F0008EC89D /* ios_file.hpp */,
 				C6709F852BE15A6A00C63C2F /* AppDelegate.h */,
 				C6709F862BE15A6A00C63C2F /* AppDelegate.m */,
 				C6709F882BE15A6A00C63C2F /* SceneDelegate.h */,
@@ -115,6 +123,8 @@
 				C6709F932BE15A6C00C63C2F /* LaunchScreen.storyboard */,
 				C6709F962BE15A6C00C63C2F /* Info.plist */,
 				C6709F972BE15A6C00C63C2F /* main.m */,
+				C6709FBA2BE15AE700C63C2F /* ios_file_system.mm */,
+				C6709FBC2BE15B6300C63C2F /* ios_file_system.h */,
 			);
 			path = "Test-FileSystem";
 			sourceTree = "<group>";
@@ -214,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C6709F7D2BE15A6A00C63C2F /* Build configuration list for PBXProject "Test-FileSystem" */;
+			buildConfigurationList = C6709F7D2BE15A6A00C63C2F /* Build configuration list for PBXProject "iOS-Specific-Implementation" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6709FBB2BE15AE700C63C2F /* ios_file_system.mm in Sources */,
 				C6709F8D2BE15A6A00C63C2F /* ViewController.m in Sources */,
 				C6709F872BE15A6A00C63C2F /* AppDelegate.m in Sources */,
 				C6709F982BE15A6C00C63C2F /* main.m in Sources */,
 				C6709F8A2BE15A6A00C63C2F /* SceneDelegate.m in Sources */,
+				C62AC4742BE181F0008EC89D /* ios_file.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +572,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C6709F7D2BE15A6A00C63C2F /* Build configuration list for PBXProject "Test-FileSystem" */ = {
+		C6709F7D2BE15A6A00C63C2F /* Build configuration list for PBXProject "iOS-Specific-Implementation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6709FAF2BE15A6D00C63C2F /* Debug */,
